@@ -1,0 +1,27 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+           
+           
+           
+           <http auto-config='true'>
+
+		<intercept-url pattern="/message.html"  access="ROLE_USER,ROLE_POWER_USER,ROLE_INSPECTOR,ROLE_MANAGER,ROLE_SENIOR MANAGER,ROLE_ADMINISTRATOR,ROLE_SENIOR MANAGER_3B" />
+
+		<form-login login-page='/signin.html' default-target-url='/message.html'
+			always-use-default-target='true' authentication-success-handler-ref="authenticationSuccessHandler"
+			authentication-failure-handler-ref="authenticationFailureHandler" />
+
+		<logout invalidate-session="true" delete-cookies="JSESSIONID"
+			success-handler-ref="logoutHandler" />
+
+		</http>
+		
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userService">
+			<!-- <password-encoder hash="sha" /> -->
+		</authentication-provider>
+	</authentication-manager>
+	
+</beans:beans>

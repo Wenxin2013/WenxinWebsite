@@ -1,0 +1,18 @@
+[submodule "src/main/webapp/jmvc"]
+	path = src/main/webapp/jmvc
+	url = https://github.com/Wenxin2013/jmvc-generators.git
+[submodule "src/main/webapp/src/main/webapp/steal"]
+	path = src/main/webapp/src/main/webapp/steal
+	url = https://github.com/Wenxin2013/steal.git
+[submodule "src/main/webapp/steal"]
+	path = src/main/webapp/steal
+	url = https://github.com/Wenxin2013/steal.git
+[submodule "src/main/webapp/jquerypp"]
+	path = src/main/webapp/jquerypp
+	url = https://github.com/Wenxin2013/jquerypp.git
+[submodule "src/main/webapp/can"]
+	path = src/main/webapp/can
+	url = https://github.com/Wenxin2013/canjs.git
+[submodule "src/main/webapp/canui"]
+	path = src/main/webapp/canui
+	url = https://github.com/Wenxin2013/canui.git
